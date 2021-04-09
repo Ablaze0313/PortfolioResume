@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>Welcome to My Page</title>
+</head>
+<body id="home">
+    <header class="header">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <span class="text-primary">Cherylle</span>Jimeno
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Hi I'm Cherylle Jimeno !</h1>
+            <p>A Manila-based Graphic Designer/Layout Artist</p>
+            <a href="#about" class="btn" id="read-more"> Read More</a>
+        </div>
+    </header>
+
+    <main>
+        <!--About:Che-->
+        <section class="solutions flex-columns" id="about">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/news-sports copy.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-primary">
+                        <h2>About Me</h4>
+                        <p>Currently taking up AB Multimedia Arts and Design at iACADEMY. Business owner and a Social Media Manager.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Background-->
+        <section id="background" class="icons bg-light">
+            <div class="flex-items">
+                <div>
+                    <div>
+                        <h3>Elementary</h3>
+                        <h4>Dominican College</h4>
+                        <p>2006-2012</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div>
+                       
+                        <h3>Junior High School</h3>
+                        <h4>Dominican College</h4>
+                        <p>2012-2016</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        
+                        <h3>Senior High School</h3>
+                        <h4>Media and Visual Arts</h4>
+                        <p>iACADEMY, 2016-2018</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        
+                        <h3>College</h3>
+                        <h4>AB Multimedia Arts and Design</h4>
+                        <p>iACADEMY, 2018-2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Portfolio-->
+
+        <section id="works" class="cases flex-grid section-padding">
+            <header class="section-header">
+              
+              <h2>My Portfolio</h2>
+              <p> Here are my works!</p>
+            </header>
+            <div class="row">
+              <div class="column">
+                
+                  <img src="images/bag-chips.png" alt="">
+                  <img src="images/board-menu.jpg"alt="">
+                
+              </div>
+              <div class="column">
+                  <img src="images/book-balloon.jpg"alt=""> 
+                  <img src="images/brochure-pizza.png" alt="">
+              </div>
+              <div class="column">
+                  <img src="images/comic-paraluman.jpg" alt="" />
+             
+                  <img src="images/glass-sign.png" alt="" />
+              </div>
+              <div class="column">
+                  <img src="images/menu-jap.png" alt="" />
+                  <img src="images/web-coffee2.png" alt="" />
+               
+              </div>
+            </div>
+          </section>
+        
+      <!-- Contact -->
+      <section id="contact" class="contact flex-columns flex-reverse">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+                <img src="images/card-jjang.png" alt="">
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-primary">
+              <h2>Contact Me</h2>
+              <form action="" class="callback-form">
+                <div class="form-control">
+                  <label for="name"></label>
+                  <input type="text" name="name" id="name"placeholder="Enter name"/>
+                </div>
+                <div class="form-control">
+                  <label for="email"></label>
+                  <input  type="email" name="email" id="email" placeholder="Enter email" />
+                </div>
+                <div class="form-control">
+                  <label for="phone"></label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter phone"
+                  />
+                </div>
+                <input type="submit" value="Send" id="submit" class="btn" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2021 - My Website</p>
+    </footer>
+   
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+  
+        window.onscroll = function () {
+          if (window.pageYOffset > 100) {
+            navbar.classList.remove('top');
+            if (!scrolled) {
+              navbar.style.transform = 'translateY(-70px)';
+            }
+            setTimeout(function () {
+              navbar.style.transform = 'translateY(0)';
+              scrolled = true;
+            }, 200);
+          } else {
+            navbar.classList.add('top');
+            scrolled = false;
+          }
+        };
+    </script>
+</body>
+</html>
